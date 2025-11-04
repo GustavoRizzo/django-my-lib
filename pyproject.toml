@@ -23,6 +23,18 @@ ruff = "^0.14.3"
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.ruff]
+line-length = 120
+exclude = [
+    "migrations",
+    "__pycache__",
+    "build",
+    "dist"
+]
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "N", "UP", "B"]
+
 [tool.taskipy.tasks]
 lint = { cmd = "ruff check .", help = "runs the linter" }
 lint-fix = { cmd = "ruff check . --fix", help = "runs the linter and tries to fix issues" }
