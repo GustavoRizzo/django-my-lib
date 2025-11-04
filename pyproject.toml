@@ -16,7 +16,12 @@ dependencies = [
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.18.2"
+taskipy = "^1.14.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+test = { cmd = "cd demo_project && python manage.py test", help = "runs the test suite" }
+run-demo = { cmd = "cd demo_project && python manage.py runserver", help = "runs the demo project server" }
