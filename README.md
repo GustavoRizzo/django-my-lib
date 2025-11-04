@@ -1,7 +1,7 @@
 
-# django-sample-components 🚀
+# django-my-lib 🚀
 
-[![PyPI](https://img.shields.io/pypi/v/django-sample-components.svg)](https://pypi.org/project/django-sample-components/)
+[![PyPI](https://img.shields.io/pypi/v/django-my-lib.svg)](https://pypi.org/project/django-my-lib/)
 
 
 > This project is a test for creating a Django library. 🧩
@@ -12,24 +12,24 @@
 You can install the library using pip or poetry:
 
 ```bash
-pip install django-sample-components
+pip install django-my-lib
 ```
 
 or
 
 ```bash
-poetry add django-sample-components
+poetry add django-my-lib
 ```
 
 
 ## Configuration ⚙️
 
-Add `django_sample_components` to the `INSTALLED_APPS` list in your `settings.py`:
+Add `django_my_lib` to the `INSTALLED_APPS` list in your `settings.py`:
 
 ```python
 INSTALLED_APPS = [
     # ... other apps ...
-    'django_sample_components',
+    'django_my_lib',
 ]
 ```
 
@@ -52,8 +52,8 @@ python manage.py migrate
 To run the Django project locally during development, follow the steps below:
 
 ```bash
-git clone https://github.com/GustavoRizzo/django-sample-components.git
-cd django-sample-components
+git clone https://github.com/GustavoRizzo/django-my-lib.git
+cd django-my-lib
 poetry install
 cd demo_project
 pip install -e ..

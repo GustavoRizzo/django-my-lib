@@ -9,4 +9,4 @@ class Home(View):
             'url_pypi': settings.URL_PYPI,
             'url_github': settings.URL_GITHUB,
         }
-        return render(request, 'django_sample_components/home.html', context)
+        return render(request, 'django_my_lib/home.html', context)

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_sample_components',
+    'django_my_lib',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +122,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-URL_PYPI = 'https://pypi.org/project/django-sample-components/'
-URL_GITHUB = 'https://github.com/GustavoRizzo/django-sample-components'
+URL_PYPI = 'https://pypi.org/project/django-my-lib/'
+URL_GITHUB = 'https://github.com/GustavoRizzo/django-my-lib'
