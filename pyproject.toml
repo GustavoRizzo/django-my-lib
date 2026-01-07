@@ -1,6 +1,6 @@
 [project]
 name = "django-my-lib"
-version = "0.1.5"
+version = "0.1.6"
 description = "A handy collection of reusable Django UI components, allowing me to share and integrate elements efficiently across various projects."
 authors = [
     {name = "Gustavo Rizzo S M de Albuquerque",email = "grizzo.albu@gmail.com"}
@@ -35,8 +35,17 @@ exclude = [
 [tool.ruff.lint]
 select = ["F", "E", "W", "I", "N", "UP", "B"]
 
+[tool.taskipy.variables]
+V_DEMO_FOLDER = "cd demo_project &&"
+
+[tool.taskipy.settings]
+use_vars = true
+
 [tool.taskipy.tasks]
+migrate = { cmd = "{V_DEMO_FOLDER} python ./manage.py migrate", help = "applies database migrations for the demo project" }
+create-superuser = {cmd ="{V_DEMO_FOLDER} python ./manage.py createsuperuser", help = "creates a superuser for the demo project"}
+setup = { cmd = "task migrate && task create-superuser", help = "sets up the demo project by applying migrations and creating a superuser" }
 lint = { cmd = "ruff check .", help = "runs the linter" }
 lint-fix = { cmd = "ruff check . --fix", help = "runs the linter and tries to fix issues" }
-test = { cmd = "cd demo_project && python manage.py test", help = "runs the test suite" }
-run-demo = { cmd = "cd demo_project && python manage.py runserver", help = "runs the demo project server" }
+test = { cmd = "{V_DEMO_FOLDER} python manage.py test", help = "runs the test suite" }
+run-demo = { cmd = "{V_DEMO_FOLDER} python manage.py runserver", help = "runs the demo project server" }

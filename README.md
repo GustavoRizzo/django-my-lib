@@ -13,11 +13,7 @@ You can install the library using pip or poetry:
 
 ```bash
 pip install django-my-lib
-```
-
-or
-
-```bash
+# or
 poetry add django-my-lib
 ```
 
@@ -55,19 +51,33 @@ To run the Django project locally during development, follow the steps below:
 git clone https://github.com/GustavoRizzo/django-my-lib.git
 cd django-my-lib
 poetry install
-cd demo_project
-pip install -e ..
-poetry run ./manage.py runserver
+poetry run task run-demo
 ```
+
+For a more complete setup, you can run the comands:
+```bash
+poetry run task migrate
+poetry run task createsuperuser
+# or
+poetry run task setup  # that will do the same as above
+```
+
 
 ### Tests 🧪
 To run the tests, use the command below inside the `demo_project` directory:
 
 ```bash
-poetry run ./manage.py test
+poetry run task test
 ```
 
 
+### Linting 🧹
+To check for linting issues, use the command below:
+
+```bash
+poetry run task lint
+poetry run task lint-fix  # to fix issues automatically
+```
 
 ## Updating and publishing the library 🚢
 
