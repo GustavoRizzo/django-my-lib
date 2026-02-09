@@ -89,3 +89,43 @@ poetry build
 tar -tzf dist/*.tar.gz | head -20  # to see the files inside the package
 poetry publish
 ```
+
+# Use this project as a template for your own Django library! 🌟
+
+## Rename the project and package
+To rename the project and package, follow these steps:
+1. On github click on the "Use this template" button to create a new repository based on this template. Give it a new name (e.g., `django-awesome-lib`).
+
+2. Inside the project folder, rename the package folder from `django_my_lib` to your desired name (e.g., `django_awesome_lib`).
+```bash
+mv django_my_lib django_awesome_lib
+```
+
+3. Make CTRL+F and replace all occurrences of `django_my_lib` with `django_awesome_lib` in the codebase.
+
+4. Rename template folder: On django_awesome_lib/templates, rename the folder from `demo_project` to your desired name (e.g., `demo_awesome_project`).
+```bash
+mv django_awesome_lib/templates/django_my_lib django_awesome_lib/templates/django_awesome_lib
+```
+
+5. Make CTRL+F and replace all occurrences of `django-my-lib` with `django-awesome-lib` in the codebase.
+
+6. Ajdust the project name in the `pyproject.toml` file.
+```toml
+[tool.poetry]
+name = "django-awesome-lib"
+version = "0.1.0"
+description = "This project is a test for creating a Django library."
+authors = [
+    "Your Name <your.email@example.com>"
+]
+```
+
+7. Adjust README.md to reflect the new project name and package name.
+```markdown
+# django-awesome-lib 🚀
+[![PyPI](https://img.shields.io/pypi/v/django-awesome-lib.svg)](https://pypi.org/project/django-awesome-lib/)
+> This my brand new project is a test for creating a Django library. 🧩
+```
+
+8. Now you are free to start developing your new Django library! 🎉
