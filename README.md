@@ -79,6 +79,21 @@ poetry run task lint
 poetry run task lint-fix  # to fix issues automatically
 ```
 
+## If using pyenv
+To manage Python versions, you can use `pyenv`. To install `pyenv`, follow the instructions in the [pyenv GitHub repository](https://github.com/pyenv/pyenv).
+```bash
+pyenv update
+pyenv install 3.12.0
+# Activete the virtual environment with the correct Python version
+python -m venv venv
+source venv/bin/activate
+pip install pip --upgrade
+pip install poetry
+poetry install
+poetry run task run-demo
+```
+
+
 ## Updating and publishing the library 🚢
 
 To update the version, build, and publish your library, use the commands below:
