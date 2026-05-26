@@ -1,0 +1,11 @@
+{
+  "project_name": "django-my-lib",
+  "package_name": "django_my_lib",
+  "app_class_name": "DjangoMyLib",
+  "description": "A handy collection of reusable Django UI components, allowing me to share and integrate elements efficiently across various projects.",
+  "author_name": "Gustavo Rizzo S M de Albuquerque",
+  "author_email": "grizzo.albu@gmail.com",
+  "github_url": "https://github.com/GustavoRizzo/django-my-lib",
+  "pypi_url": "https://pypi.org/project/django-my-lib/",
+  "version": "0.1.7"
+}

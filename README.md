@@ -6,6 +6,17 @@
 
 > This project is a test for creating a Django library. 🧩
 
+## Table of Contents
+
+- [Installation](#installation-)
+- [Configuration](#configuration-)
+- [Migrations](#migrations-)
+- [Running locally as a developer](#running-locally-as-a-developer-)
+  - [Tests](#tests-)
+  - [Linting](#linting-)
+  - [If using pyenv](#if-using-pyenv)
+- [Updating and publishing the library](#updating-and-publishing-the-library-)
+- [Use this project as a template](#use-this-project-as-a-template-for-your-own-django-library-)
 
 ## Installation 📦
 
@@ -107,40 +118,52 @@ poetry publish
 
 # Use this project as a template for your own Django library! 🌟
 
-## Rename the project and package
-To rename the project and package, follow these steps:
-1. On github click on the "Use this template" button to create a new repository based on this template. Give it a new name (e.g., `django-awesome-lib`).
+## Creating a new library from this template
 
-2. Inside the project folder, rename the package folder from `django_my_lib` to your desired name (e.g., `django_awesome_lib`).
+This template is designed to be adapted by an AI assistant in seconds. Follow the steps below.
+
+### 1. Fork the repository
+
+On GitHub, click **"Use this template"** → **"Create a new repository"** and give it a name (e.g., `django-awesome-lib`).
+
+### 2. Clone your new repository
+
 ```bash
-mv django_my_lib django_awesome_lib
+git clone https://github.com/YOUR_USER/django-awesome-lib.git
+cd django-awesome-lib
 ```
 
-3. Make CTRL+F and replace all occurrences of `django_my_lib` with `django_awesome_lib` in the codebase.
+### 3. Open it in your editor with an AI assistant
 
-4. Rename template folder: On django_awesome_lib/templates, rename the folder from `demo_project` to your desired name (e.g., `demo_awesome_project`).
-```bash
-mv django_awesome_lib/templates/django_my_lib django_awesome_lib/templates/django_awesome_lib
+Open the project in VS Code, Cursor, or any editor with Claude Code (or a similar AI assistant) available.
+
+### 4. Update template.config.json
+
+Open `template.config.json` and fill in your new project's values:
+
+```json
+{
+  "project_name": "django-awesome-lib",
+  "package_name": "django_awesome_lib",
+  "app_class_name": "DjangoAwesomeLib",
+  "description": "A description of what your library does.",
+  "author_name": "Your Name",
+  "author_email": "your@email.com",
+  "github_url": "https://github.com/YOUR_USER/django-awesome-lib",
+  "pypi_url": "https://pypi.org/project/django-awesome-lib/",
+  "version": "0.1.0"
+}
 ```
 
-5. Make CTRL+F and replace all occurrences of `django-my-lib` with `django-awesome-lib` in the codebase.
+### 5. Send this prompt to the AI
 
-6. Ajdust the project name in the `pyproject.toml` file.
-```toml
-[tool.poetry]
-name = "django-awesome-lib"
-version = "0.1.0"
-description = "This project is a test for creating a Django library."
-authors = [
-    "Your Name <your.email@example.com>"
-]
+Copy and paste the prompt below into the AI assistant chat:
+
+```
+Read the template.config.json file and use it to adapt this project to the new library.
+Propagate all changes across every file in the project: rename folders, update all references
+to the old package name, description, URLs, and author info. After that, run the tests and
+linter to confirm everything is working.
 ```
 
-7. Adjust README.md to reflect the new project name and package name.
-```markdown
-# django-awesome-lib 🚀
-[![PyPI](https://img.shields.io/pypi/v/django-awesome-lib.svg)](https://pypi.org/project/django-awesome-lib/)
-> This my brand new project is a test for creating a Django library. 🧩
-```
-
-8. Now you are free to start developing your new Django library! 🎉
+The AI will handle all renames and references automatically. Done! 🎉
